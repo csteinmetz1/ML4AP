@@ -131,6 +131,10 @@ text-shadow: none; }
   margin: 5px 0;
 }
 
+.light-text {
+  font-weight: 200;
+}
+
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
 .reveal video,
