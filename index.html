@@ -16,6 +16,21 @@
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
+		<style>
+			body { 
+				font-variant-ligatures: none;
+			}
+			.container {
+				display: flex;
+			}
+			.col {
+				flex: 1;
+			}
+			.MJXc-display {
+				font-size: 1.3em !important;
+			}
+		</style>
+
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -48,7 +63,7 @@
 					<div style="float: left; text-align: left;">
 						<img src="img/headshot_bw_sm.jpg" style="width: 300px;">
 						<h3 style="margin: 0px 0 0 0;" ><strong> Christian Steinmetz </strong></h3>
-						<h5 style="margin: 0px 0 0 0;"> <a href="mailto:christian.steinmetz@upf.edu">christianjames.steinmetz01@estudiant.upf.edu</a></h5>
+						<h5 style="margin: 0px 0 0 0;"> <a href="christianjames.steinmetz01@estudiant.upf.edu">christianjames.steinmetz01@estudiant.upf.edu</a></h5>
 						<h5 style="margin: 0px 0 0 0;"> <a href="https://christiansteinmetz.com">www.christiansteinmetz.com</a></h5>						
 						<h5 style="margin: 0px 0 0 0;"> <a href="https://twitter.com/csteinmetz1">@csteinmetz1</a></h5>
 					</div>
@@ -87,7 +102,7 @@
 					</div>
 				</section>
 
-				<!-- creative and assistive intro section--->
+				<!-- --------------- creative and assistive intro section ---------------------- --->
 				<section>
 					<section>
 						<h2><strong>creative</strong> and <strong>assistive</strong> audio plugins</h2>
@@ -119,7 +134,7 @@
 					<section>
 						<h2 style="margin: 0;">Popgun Labs Splash PRO</h2>
 						<h4>( ML ) </h4>
-						<img src="img/popgun_splash_pro.png" style="width: 43%">						
+						<img src="img/popgun_splash_pro.png" style="width: 30%">						
 					</section>
 
 					<!-- soundtoys --->
@@ -159,6 +174,7 @@
 
 				<!-- Our plugins intro slide --->
 				<section>
+					<h2>Our work</h2>
 					<div class="fragment fade-in" style="float:left; ">
 						<img src="img/nverb_wshadow.png" style="width: 450px;">
 						<h3 style="margin: 0">NeuralReverberator</h3>
@@ -171,22 +187,228 @@
 						<p class="light-text">Smarter equalizer with β-VAE</p>
 						<h4 class="fragment fade-in">( assistive) </h4>
 					</div>
-					
 				</section>
 
-				
-				<section data-background="#c8102f">
-					<h1 class="white"> Red section section slide</h1>
+				<!-- --------------- NeuralReverberator section  ------------------------- -->
+				<section>
+					<!-- NeuralReverberator intro slide -->
+					<section>
+						<h1 style="margin: 0px 0 0 0;">NeuralReverberator</h1>
+						<img src="img/nverb_wshadow.png" style="width: 60%;">
+					</section>
+
+					<!-- Types of artificial reverb -->
+					<section>
+						<div style="float: left"> 
+							<h3>Convolutional reverb</h3>
+							<img src="img/hall.jpg" alt="Hall" style="width:300px;">
+							<br>
+							<audio controls>
+								<source src=audio/hall.wav type=audio/wav>
+							</audio> 
+							<br>
+							<audio controls>
+								<source src=audio/dry.wav type=audio/wav>
+							</audio> 	
+							<br>
+							<audio controls>
+								<source src=audio/hall_gtr.wav type=audio/wav>
+							</audio> 	
+						</div>
+						<div style="float: right;">
+							<h3>Algorithmic reverb</h3>
+							<img src="img/platinum_verb.png" alt="platinumVerb" style="width:300px;">
+							<br>
+							<img src="img/reverb_algo.gif" alt="allpass" style="width:300px;">
+							<p class="light-text">Nested allpass filters</p>
+						</div>
+					</section>
+
+					<!-- Types of artificial reverb -->
+					<section>
+						<h2>Spectral autoencoder</h2>
+						<img src="img/spectral_autoencoder.jpg" alt="Spectral Autoencoder" style="width:95%;">
+						<h3>We create a parameterized convolutional reverb synthesizer</h3>
+					</section>
+
+
 				</section>
+
+				<!-- --------------- flowEQ section  ------------------------- -->
+				<section>
+
+					<!-- flowEQ intro slide -->
+					<section>
+						<h1 style="margin: 0px 0 0 0;">flowEQ</h1>
+						<img src="img/flowEQ_wshadow.png" style="width: 60%;">
+					</section>
+
+					<!-- the Parametric Equalizer -->					
+					<section>
+						<img src="img/q6.png" style="max-height: 50%; max-width: 50%;">		
+						<h3>Digital parametric equalizer plugin</h3>	
+					</section>
+
+					<!-- Power of the parametric EQ -->
+					<section>		
+						<table>
+							<tr >
+								<td style="border-bottom: none; vertical-align:middle;"><h3>Gain</h3></td>
+								<td style="border-bottom: none;"><img src="img/gain.gif" style="max-height: 75%; max-width: 75%;"></td>
+							</tr>
+							<tr>
+								<td style="border-bottom: none; vertical-align:middle;"><h3>Frequency</h3></td>
+								<td style="border-bottom: none;"><img src="img/freq.gif" style="max-height: 75%; max-width: 75%;"></td>
+							</tr>
+							<tr>
+								<td style="border-bottom: none; vertical-align:middle;"><h3>Q (bandwidth)</h3></td>
+								<td style="border-bottom: none;"><img src="img/q.gif" style="max-height: 75%; max-width: 75%;"></td>
+							</tr>
+						</table>
+					</section>
+
+					<!-- Motivating example -->
+					<section>
+						<h2>Motivating example</h2>
+						<div class="fragment fade-in-then-semi-out">
+							<h3>What we recorded...</h3>
+							<audio controls>
+								<source src="audio/pianoEQ_preEQ.mp3" type="audio/mp3">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+						<div style="margin: 25px;"></div>
+						<div class="fragment fade-in-then-semi-out">
+							<h3>What we want...</h3>
+							<audio controls>
+								<source src="audio/pianoEQ_postEQ.mp3" type="audio/mp3">
+								Your browser does not support the audio element.
+							</audio>
+						</div>
+						<div style="margin: 25px;"></div>
+						<h2 class="fragment fade-in"> How do we set the EQ to get there? </h2>
+					</section>
+
+					<!-- Motivating example: Result -->
+					<section>
+						<div>
+							<h3> The parameters to achieve this are non-obvious </h3>
+							<p class="fragment fade-in">(except to the well trained audio engineer)</p>
+						</div>
+						<img class="fragment fade-in" src="img/pianoEQ.png" style="max-height: 40%; max-width: 40%;">
+					</section>
+
+					<!-- Generative decoder -->
+					<section>
+						<div class="container">
+							<div style="width:60%">
+								<img src="img/decoder_nosample.png" style="max-height: 90%; max-width: 90%;">
+								<p class="fragment fade-in" >Select a point</p>
+							</div>
+							<div class="col">
+								<p class="fragment fade-in" style="margin: 200px 0 0 0;">Each point decodes to EQ config</p>
+								<img class="fragment fade-in" src="img/eq_curve.png" style="max-height: 80%; max-width: 80%;">		
+							</div>
+						</div>		
+					</section>
+
+					<!-- Disentanglement-->
+					<section>
+						<h2>Disentanglement</h2>
+						<div class="fragment fade-in">
+							<h4> Loss function</h4>
+							$$ \Large \mathcal{L}_{\beta-VAE}(\pmb{\theta},\pmb{\phi},\mathbf{x}^{(i)}) = - \mathbb{E}_{\mathbf{z} \sim q_{\theta}(\mathbf{z}|\mathbf{x}^{(i)})} [ {\log{p_\phi(\mathbf{x}^{(i)} | \mathbf{z})}} ] + \mathbf{\beta} \: D_{KL} (q_\theta(\mathbf{z} | \mathbf{x}^{(i)}) || p_\theta(\mathbf{z})) $$
+						</div>
+
+						<ul>
+							<li class="fragment fade-in"><p>The beta term weighs the KL loss against the reconstruction loss</p></li>
+							<li class="fragment fade-in"><p>Larger beta means greater disentanglement</p></li>
+						</ul>
+
+						<h5 style="margin: 80px 0 5px 0px;"><strong>β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework</strong></h5>
+						<h6>Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, and Alexander Lerchner, 2017.</h6> 
+					</section>
+
+				</section>
+
+				<!-- ---------------  Future directions and wrap-up section  ------------------------- -->
+				<section>
+
+					<!-- What's next? -->
+					<section data-background="#c8102f">
+						<h1 class="white">What's next?</h1>
+					</section>
+
+					<!-- End-to-end transforms -->
+					<section>
+						<h2>End-to-end methods for audio transformation</h2>
+						<h3 class="fragment fade-in">Combine <strong>creative</strong> and <strong>assistive</strong> tools</h3>
+					</section>
+
+					<!-- End-to-end mixing -->
+					<section>
+						<h2>Multitrack mix enhancement</h2>
+						<h4>with Wave-U-Net</h4>
+
+						<div style="float: left;">
+							<h5>Input (pre-mix)</h5>
+							<audio controls>
+								<source src=audio/premix.wav type=audio/wav>
+							</audio> 
+						</div>
+
+						<div style="float: right;">
+							<h5>Target (professional mix)</h5>
+							<audio controls>
+								<source src=audio/mix.wav type=audio/wav>
+							</audio> 
+						</div>		
+					</section>
+
+					<!-- What's been done -->
+					<section>
+						<h2>What's been done so far?</h2>
+
+						<h3 class="fragment fade-in" style="text-align:left;">Audio effect modeling</h3>
+
+						<div class="fragment fade-in" style="text-align:left;">
+							<h5 style="margin: 10px 0 5px 0px;"><strong>SignalTrain: Profiling audio compressors with deep neural networks</strong></h5>
+							<h6>Scott H. Hawley, Benjamin Colburn, Stylianos I. Mimilakis, May 2019</h6> 
+						</div>
+
+						<div class="fragment fade-in" style="text-align:left;">
+							<h5 style="margin: 10px 0 5px 0px;"><strong>A general-purpose deep learning approach to model time-varying audio effects</strong></h5>
+							<h6>Marco A. Martínez Ramírez, Emmanouil Benetos, Joshua D. Reiss, September 2019</h6> 
+						</div>
+
+						<h3 class="fragment fade-in" style="text-align:left;">Speech enhancement</h3>
+
+						<div class="fragment fade-in" style="text-align:left;">
+							<h5 style="margin: 10px 0 5px 0px;"><strong>SEGAN: Speech Enhancement Generative Adversarial Network</strong></h5>
+							<h6>Santiago Pascual, Antonio Bonafonte, Joan Serrà, March 2017</h6> 
+						</div>
+
+						<div class="fragment fade-in" style="text-align:left;">
+							<h5 style="margin: 10px 0 5px 0px;"><strong>Improved Speech Enhancement with the Wave-U-Net</strong></h5>
+							<h6>Craig Macartney, Tillman Weyde, November 2017</h6> 
+						</div>
+
+
+					</section>
+
+				</section>
+
+
+				<!-- Outro slide -->
 				<section data-background="#c8102f">
 					<div class="end">
 						<img src="img/upf_wh.svg" style="width: 35%;">
-						<h3 class="white" style="margin: 25px 0 0 0;"> Description of the first webpage or link</h3>
-						<h5> <a class="white" href="https://">https://</a></h5>   
-						<h3 class="white" style="margin: 25px 0 0 0;"> Description of the second webpage or link</h3>
-						<h5> <a class="white" href="http://">http://</a></h5>   
-						<h4 class="white"> <img src="img/twitter_wh.png" alt="twitter" style="margin: 50px 10px 0 0; width: 30px"> @twitterhandle</h4> 
-						<h4 class="white"> <img src="img/mail_wh.png" alt="mail" style="margin: 5px 10px 0 0; width: 30px"> address@uni.edu</h4>
+						<h3 class="white" style="margin: 25px 0 0 0;"> More details on these plugins</h3>
+						<h5> <a class="white" href="https://www.christiansteinmetz.com">https://www.christiansteinmetz.com</a></h5>   
+						<h3 class="white" style="margin: 25px 0 0 0;"> See these slides</h3>
+						<h5> <a class="white" href="https://csteinmetz1.github.io/ML4AP/">https://csteinmetz1.github.io/ML4AP/</a></h5>   
+						<h4 class="white"> <img src="img/twitter_wh.png" alt="twitter" style="margin: 50px 10px 0 0; width: 30px"> @csteinmetz1</h4> 
+						<h4 class="white"> <img src="img/mail_wh.png" alt="mail" style="margin: 5px 10px 0 0; width: 30px">christianjames.steinmetz01@estudiant.upf.edu</h4>
 					</div>
 				</section>
 			</div>
