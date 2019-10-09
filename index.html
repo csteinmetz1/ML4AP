@@ -162,12 +162,14 @@
 						<img src="img/accusonus_era4.jpg" style="width: 80%">						
 					</section>
 
+					<!---
 					<section>
 						<h1>Relevant</h1>
 						<h3>but not music production</h3>
 					</section>
+					-->
 
-					<!-- Magenta Studio--->
+					<!-- Magenta Studio 
 					<section>
 						<h2 style="margin: 0;">Magenta Studio</h2>
 						<h4>( ML )</h4>
@@ -175,12 +177,20 @@
 							<source src="https://magenta.tensorflow.org/assets/studio/hero.mp4" type="video/mp4">
 						</video>
 					</section>
+					--->
 
-					<!-- Popgun Labs Splash PRO --->
+					<!-- Popgun Labs Splash PRO
 					<section>
 						<h2 style="margin: 0;">Popgun Labs Splash PRO</h2>
 						<h4>( ML ) </h4>
 						<img src="img/popgun_splash_pro.png" style="width: 30%">						
+					</section>
+					 --->
+
+					<!--Intro summary -->
+					 <section>
+						<h1>Limited use of ML in industry</h1>
+						<h3>and no true end-to-end applications</h3>
 					</section>
 				</section>
 
@@ -299,7 +309,7 @@
 							<li class="fragment fade-in">Use Griffin-Lim for phase reconstruction</li>
 							<li class="fragment fade-in">Model is trained on mono IRs, but we use a trick for stereo</li>
 							<li class="fragment fade-in">MATLAB Audio Toolbox for implementing VST plugin</li>
-							<li class="fragment fade-in">For real-time operation on CPU we subspace the latent space output</li>
+							<li class="fragment fade-in">For real-time operation on CPU we subsample the latent space output</li>
 						</ul>
 					</section>
 				</section>
@@ -463,10 +473,10 @@
 						<h2>Implementation details</h2>
 						<ul>
 							<li class="fragment fade-in">Train 12 different models with varying latent dim and β</li>
-							<li class="fragment fade-in">Train all models for 200 epochs (about 2 hours on CPU)</li>
+							<li class="fragment fade-in">All models trained for 200 epochs (about 2 hours on CPU)</li>
 							<li class="fragment fade-in">MATLAB Audio Toolbox for implementing VST plugin</li>
 							<li class="fragment fade-in">Network is implemented in pure MATLAB code and inference runs in real-time</li>
-							<li class="fragment fade-in">User can select among these samples to adjust latent representation</li>
+							<li class="fragment fade-in">User can select among these models to adjust latent representation</li>
 						</ul>
 					</section>
 
