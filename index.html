@@ -116,9 +116,55 @@
 
 					<!-- soundtoys --->
 					<section>
-						<h2 style="margin: 0;">Soundtoys</h2>
+						<h2 style="margin: 0;">Soundtoys suite</h2>
 						<h4>( DSP ) </h4>
 						<img src="img/soundtoys.jpg" style="width: 80%">						
+					</section>
+
+					<!-- vulf compressor --->
+					<section>
+						<h2 style="margin: 0;">Goodhertz Vulf Compressor</h2>
+						<h4>( DSP ) </h4>
+						<img src="img/goodhertz-vulf-comp.png" style="width: 80%">						
+					</section>
+
+					<!-- bx_panEQ --->
+					<section>
+						<h2 style="margin: 0;">Brainworx bx_panEQ</h2>
+						<h4>( DSP ) </h4>
+						<img src="img/bx-pan-eq.png" style="width: 80%">						
+					</section>
+
+					<!-- assistive definition--->
+					<section>
+						<h1>assistive</h1>
+						<h3>lower friction in achieving desired result</h3>
+					</section>
+
+					<!-- iZotope Ozone--->
+					<section>
+						<h2 style="margin: 0;">iZotope Ozone</h2>
+						<h4>( DSP + ML ) </h4>
+						<img src="img/izotope_ozone.jpg" style="width: 80%">			
+					</section>
+
+					<!-- LANDR --->
+					<section>
+						<h2 style="margin: 0;">LANDR Mastering</h2>
+						<h4>( DSP + ML ) </h4>
+						<img src="img/landr.png" style="width: 50%">						
+					</section>
+
+					<!-- accusonus --->
+					<section>
+						<h2 style="margin: 0;">accusonus ERA4</h2>
+						<h4>( DSP + ML ) </h4>
+						<img src="img/accusonus_era4.jpg" style="width: 80%">						
+					</section>
+
+					<section>
+						<h1>Relevant</h1>
+						<h3>but not music production</h3>
 					</section>
 
 					<!-- Magenta Studio--->
@@ -136,45 +182,12 @@
 						<h4>( ML ) </h4>
 						<img src="img/popgun_splash_pro.png" style="width: 30%">						
 					</section>
-
-					<!-- soundtoys --->
-					<section>
-						<h2 style="margin: 0;">Soundtoys</h2>
-						<img src="img/soundtoys.jpg" style="width: 80%">						
-					</section>
-
-					<!-- assistive definition--->
-					<section>
-						<h1>assistive</h1>
-						<h3>lower friction in achieving desired result</h3>
-					</section>
-
-					<!-- iZotope Ozone--->
-					<section>
-						<h2 style="margin: 0;">iZotope Ozone</h2>
-						<h4>( DSP ) </h4>
-						<img src="img/izotope_ozone.jpg" style="width: 80%">			
-					</section>
-
-					<!-- LANDR --->
-					<section>
-						<h2 style="margin: 0;">LANDR Mastering</h2>
-						<h4>( DSP + ML ) </h4>
-						<img src="img/landr.png" style="width: 50%">						
-					</section>
-
-					<!-- accusonus --->
-					<section>
-						<h2 style="margin: 0;">accusonus ERA4</h2>
-						<h4>( DSP ) </h4>
-						<img src="img/accusonus_era4.jpg" style="width: 80%">						
-					</section>
 				</section>
 
 
-				<!-- Our plugins intro slide --->
+				<!-- My plugins intro slide --->
 				<section>
-					<h2>Our work</h2>
+					<h2>My work</h2>
 					<div class="fragment fade-in" style="float:left; ">
 						<img src="img/nverb_wshadow.png" style="width: 450px;">
 						<h3 style="margin: 0">NeuralReverberator</h3>
@@ -224,11 +237,70 @@
 						</div>
 					</section>
 
-					<!-- Types of artificial reverb -->
+					<!-- Model framework -->
 					<section>
 						<h2>Spectral autoencoder</h2>
 						<img src="img/spectral_autoencoder.jpg" alt="Spectral Autoencoder" style="width:95%;">
 						<h3>We create a parameterized convolutional reverb synthesizer</h3>
+						<h4>(User samples from the 3 dimensional latent space)</h4>
+					</section>
+
+					<!-- How does it sound? -->
+					<section>
+						<h2>How does it sound?</h2>
+						<div style="float:left">
+							<img src="img/nverb_wshadow.png" style="width: 500px;">	
+						</div>
+
+						<div style="float:right">
+							<audio controls>
+								<source src=audio/dry.wav type=audio/wav>
+							</audio> 
+	
+							<p>Dry</p>
+							<audio controls>
+								<source src=audio/wet2.wav type=audio/wav>
+							</audio> 
+	
+							<p>Short reverb</p>				
+							<audio controls>
+								<source src=audio/wet3.wav type=audio/wav>
+							</audio> 
+	
+							<p>Long dark reverb</p>
+							<audio controls>
+								<source src=audio/wet1.wav type=audio/wav>
+							</audio> 
+							<p>(Strange delay)</p>			       
+						</div> 
+					</section>
+
+					 <!-- Dataset -->
+					 <section>
+						<h2>Data</h2>
+						<h4>~2,000 impulse responses</h4>
+						<img src="img/datasetimages.jpg" alt="Dataset images" style="width:80%;">
+						<h6 style="text-align: center">Open AIR Library, Greg Hopkins, C4DM, and others</h6>
+						<h4 style="text-align: center">Truncated to 2 seconds in length</h4>
+						<h4 style="text-align: center">Downsampled to 16 kHz</h4>
+					</section>
+
+					 <!-- Latent space -->
+					<section>
+						<h2>Latent Space</h2>
+						<img src="img/traverse_circle_tilt.gif" alt="latent space" style="width:95%;">  
+					</section>
+
+					 <!-- Model/training details -->
+					 <section>
+						<h2>Implementation details</h2>
+						<ul>
+							<li class="fragment fade-in">Vanilla CNN autoencoder based on NSynth baseline</li>
+							<li class="fragment fade-in">Use Griffin-Lim for phase reconstruction</li>
+							<li class="fragment fade-in">Model is trained on mono IRs, but we use a trick for stereo</li>
+							<li class="fragment fade-in">MATLAB Audio Toolbox for implementing VST plugin</li>
+							<li class="fragment fade-in">For real-time operation on CPU we subspace the latent space output</li>
+						</ul>
 					</section>
 
 
