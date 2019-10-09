@@ -302,8 +302,6 @@
 							<li class="fragment fade-in">For real-time operation on CPU we subspace the latent space output</li>
 						</ul>
 					</section>
-
-
 				</section>
 
 				<!-- --------------- flowEQ section  ------------------------- -->
@@ -339,7 +337,7 @@
 						</table>
 					</section>
 
-					<!-- Motivating example -->
+					<!-- Motivating example 
 					<section>
 						<h2>Motivating example</h2>
 						<div class="fragment fade-in-then-semi-out">
@@ -360,8 +358,9 @@
 						<div style="margin: 25px;"></div>
 						<h2 class="fragment fade-in"> How do we set the EQ to get there? </h2>
 					</section>
+					-->
 
-					<!-- Motivating example: Result -->
+					<!-- Motivating example: Result 
 					<section>
 						<div>
 							<h3> The parameters to achieve this are non-obvious </h3>
@@ -369,28 +368,35 @@
 						</div>
 						<img class="fragment fade-in" src="img/pianoEQ.png" style="max-height: 40%; max-width: 40%;">
 					</section>
+					-->
 
 					<!-- Dataset -->
 					<section>
 						<h2>Dataset</h2>
-						<img src="img/dataset_tf.gif" style="max-height: 30%; max-width: 30%∂;">	
+						<img src="img/dataset_tf.gif" style="max-height: 30%; max-width: 30%;">	
 
 						<h5 style="margin: 20px 0 5px 0px;"><strong>SAFE: A system for the extraction and retrieval of semantic audio descriptors</strong></h5>
 						<h6>Ryan Stables, Sean Enderby. Brecht De Man, Gyorgy Fazekas, and Joshua Reiss, 2014.</h6> 
 						<h5>~1700 examples</h4>			
 					</section>
 
-
 					<!-- Disentangled variational autoencoder -->
 					<section>
 						<h2>Disentangled variational autoencoder</h2>
 						<div style="float: left">
-							<img src="img/vae.png" style="max-height: 30%; max-width: 40%;">	
+							<img src="img/vae.png" style="max-height: 30%; max-width: 50%;">	
 						</div>
-
 					</section>
 
-					<!-- Generative decoder -->
+					<!-- How does it sound? --->
+					<section>
+						<h2>How does it sound?</h2>
+						<div class="videoWrapper">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/ws022IybkUk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>		
+					</section>
+
+					<!-- Generative decoder
 					<section>
 						<div class="container">
 							<div style="width:60%">
@@ -403,6 +409,7 @@
 							</div>
 						</div>		
 					</section>
+					 -->
 
 					<!-- Disentanglement-->
 					<section>
@@ -421,14 +428,56 @@
 						<h6>Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, and Alexander Lerchner, 2017.</h6> 
 					</section>
 
+					<!-- Latent space -->
+					<section data-transition="fade-in fade-out">
+						<div style="float: left">
+							<h2>Latent space</h2>
+							<p>β = 0.000</p>
+						</div>
+						<img src="img/2d_manifold_200_0_000.png" style="max-height: 30%; max-width: 60%;">		
+					</section>
+					<section data-transition="fade-in fade-out">
+						<div style="float: left">
+							<h2>Latent space</h2>
+							<p>β = 0.001</p>
+						</div>
+						<img src="img/2d_manifold_200_0_001.png" style="max-height: 30%; max-width: 60%;">
+					</section>
+					<section data-transition="fade-in fade-out">
+						<div style="float: left">
+							<h2>Latent space</h2>
+							<p>β = 0.010</p>
+						</div>
+						<img src="img/2d_manifold_200_0_010.png" style="max-height: 30%; max-width: 60%;">
+					</section>
+					<section data-transition="fade-in fade-out">
+						<div style="float: left">
+							<h2>Latent space</h2>
+							<p>β = 0.020</p>
+						</div>
+						<img src="img/2d_manifold_200_0_020.png" style="max-height: 30%; max-width: 60%;">	
+					</section>
+
+					<!-- Model/training details -->
+					<section>
+						<h2>Implementation details</h2>
+						<ul>
+							<li class="fragment fade-in">Train 12 different models with varying latent dim and β</li>
+							<li class="fragment fade-in">Train all models for 200 epochs (about 2 hours on CPU)</li>
+							<li class="fragment fade-in">MATLAB Audio Toolbox for implementing VST plugin</li>
+							<li class="fragment fade-in">Network is implemented in pure MATLAB code and inference runs in real-time</li>
+							<li class="fragment fade-in">User can select among these samples to adjust latent representation</li>
+						</ul>
+					</section>
+
 				</section>
 
 				<!-- ---------------  Future directions and wrap-up section  ------------------------- -->
 				<section>
 
 					<!-- What's next? -->
-					<section data-background="#c8102f">
-						<h1 class="white">What's next?</h1>
+					<section>
+						<h1>What's next?</h1>
 					</section>
 
 					<!-- End-to-end transforms -->
@@ -503,9 +552,10 @@
 						<h3 class="white" style="margin: 25px 0 0 0;"> More details on these plugins</h3>
 						<h5> <a class="white" href="https://www.christiansteinmetz.com">https://www.christiansteinmetz.com</a></h5>   
 						<h3 class="white" style="margin: 25px 0 0 0;"> See these slides</h3>
-						<h5> <a class="white" href="https://csteinmetz1.github.io/ML4AP/">https://csteinmetz1.github.io/ML4AP/</a></h5>   
+						<h5> <a class="white" href="https://csteinmetz1.github.io/ML4AP/">https://csteinmetz1.github.io/ML4AP</a></h5>   
+						<img src="img/cs-qr-code.svg" style="float:right; margin: 50px 10px 0 0; width: 200px">
 						<h4 class="white"> <img src="img/twitter_wh.png" alt="twitter" style="margin: 50px 10px 0 0; width: 30px"> @csteinmetz1</h4> 
-						<h4 class="white"> <img src="img/mail_wh.png" alt="mail" style="margin: 5px 10px 0 0; width: 30px">christianjames.steinmetz01@estudiant.upf.edu</h4>
+						<h4 class="white"> <img src="img/mail_wh.png" alt="mail" style="margin: 0px 0px 0 0; width: 30px">christianjames.steinmetz01@estudiant.upf.edu</h4>
 					</div>
 				</section>
 			</div>
